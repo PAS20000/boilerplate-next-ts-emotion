@@ -11,13 +11,25 @@ const Home = () => {
 
            </header>
            <main>
-            <Container flex>
+            <Container>
                 <h1>
-                    Container
+                    1
                 </h1>
                 <h2>
-                    flex
+                    2
                 </h2>
+                <h3>
+                    3
+                </h3>
+                <h4>
+                    4
+                </h4>
+                <h5>
+                    5
+                </h5>
+                <h6>
+                    6
+                </h6>
             </Container>
            </main>
            <footer>

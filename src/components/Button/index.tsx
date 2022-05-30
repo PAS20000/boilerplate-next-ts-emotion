@@ -3,8 +3,6 @@ import { childrenProps, defaultProps } from '../../../utils/types'
 import { Style } from './index.styles'
 
 export type Props = {
-    flex?:boolean
-    column?:boolean
     bg?:string
 }
 

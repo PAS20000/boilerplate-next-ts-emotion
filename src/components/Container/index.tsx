@@ -1,10 +1,12 @@
 import * as React from 'react'
-import { childrenProps, defaultProps } from '../../../utils/types'
+import { childrenProps } from '../../../utils/types'
 import { Style } from './index.styles'
 
 export type Props = {
     flex?:boolean
     column?:boolean
+    columns?:string
+    rows?:string
     bg?:string
 }
 
