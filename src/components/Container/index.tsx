@@ -1,18 +1,16 @@
 import * as React from 'react'
-import { defaultProps } from '../../../utils/types'
+import { childrenProps, defaultProps } from '../../../utils/types'
 import { Style } from './index.styles'
 
-type Props = {
-    column?:boolean
+export type Props = {
+    flex?:boolean
 }
 
-const Container = ({
-    children,
-} : defaultProps & Props) => {
+const Container = (props:childrenProps<Props>) => {
 
     return(
-        <Style>
-            {children}
+        <Style {...props}>
+            {props.children}
         </Style>
     )
 }

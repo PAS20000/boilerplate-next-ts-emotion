@@ -1,18 +1,18 @@
 import * as React from 'react'
 import { ThemeProvider } from '@emotion/react' 
-import { defaultProps, SetState } from '../../types'
+import { defaultProps, SetState } from '../../../utils/types'
 import { light } from '../../theme/index.styles'
 
 type mode = 'dark' | 'light'
 
-export type Theme = {
+export type ThemeCTX = {
     mode:mode
     setMode:SetState<mode>
 }
 
 
 
-export const ThemeContext = React.createContext<Theme>(null)
+export const ThemeContext = React.createContext<ThemeCTX>(null)
 
 const ThemeProviderApp = ({
     children

@@ -11,7 +11,7 @@ const Home = () => {
 
            </header>
            <main>
-            <Container>
+            <Container flex>
                 <h1>
                     Container
                 </h1>
