@@ -8,7 +8,7 @@ export type Props = {
     bg?:string
 }
 
-const Container = (props:childrenProps<Props>) => {
+const Button = (props:childrenProps<Props>) => {
 
     return(
         <Style {...props}>
@@ -17,4 +17,4 @@ const Container = (props:childrenProps<Props>) => {
     )
 }
 
-export default Container
+export default Button
