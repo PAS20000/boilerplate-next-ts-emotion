@@ -6,20 +6,23 @@ declare module '@emotion/react' {
       color?: {
         primary:string
         secondary: string
+        bg:string
       }
     }
   }
 
 export const light : Theme = {
     color: {
-        primary:'#fff',
-        secondary:'#000'
+        primary:'pink',
+        secondary:'red',
+        bg:'#fff'
     }
 }
 
 export const dark : Theme = {
     color: {
-        primary:'#000',
-        secondary:'#fff'
+        primary:'red',
+        secondary:'pink',
+        bg:'#000'
     }
 }

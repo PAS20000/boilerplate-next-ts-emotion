@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import GlobalProivider from '../src/contexts'
-import '../utils/reset.css'
+import '../utils/fonts.css'
 
 const App = ({ 
   Component, 

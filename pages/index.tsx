@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Container from '../src/components/Container'
 
 
 const Home = () => {
@@ -10,9 +11,14 @@ const Home = () => {
 
            </header>
            <main>
+            <Container>
                 <h1>
-                    Boiler Plate PAS next, emotion, ts, axios
+                    Container
                 </h1>
+                <h2>
+                    flex
+                </h2>
+            </Container>
            </main>
            <footer>
                

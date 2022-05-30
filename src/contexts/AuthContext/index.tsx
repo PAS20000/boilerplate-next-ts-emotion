@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { defaultProps, SetState } from '../../types'
+import { defaultProps, SetState } from '../../../utils/types'
 
 export type AuthCTX = {
     auth:boolean

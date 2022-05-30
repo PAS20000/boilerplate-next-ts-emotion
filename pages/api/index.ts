@@ -42,7 +42,27 @@ export const dataAnimes = [
     {
         id:'1',
         name:'anime1',
-        thumb:'...'
+        thumb:'/img/anime.webp'
+    },
+    {
+        id:'2',
+        name:'anime2',
+        thumb:'/img/anime.webp'
+    },
+    {
+        id:'3',
+        name:'anime3',
+        thumb:'/img/anime.webp'
+    },
+    {
+        id:'4',
+        name:'anime4',
+        thumb:'/img/anime.webp'
+    },
+    {
+        id:'5',
+        name:'anime5',
+        thumb:'/img/anime.webp'
     }
 ]
 
