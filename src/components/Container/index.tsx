@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { childrenProps } from '../../../utils/types'
-import { StyleArticle, StyleAside, StyleBody, StyleDiv, StyleFooter, StyleForm, StyleHeader, StyleNav } from './index.styles'
+import { StyleArticle, StyleAside, StyleBody, StyleButton, StyleDiv, StyleFooter, StyleForm, StyleHeader, StyleMain, StyleNav } from './index.styles'
 
 type Tags = [
         'article', 
@@ -11,7 +11,9 @@ type Tags = [
         'div',
         'form',
         'nav',
-        'footer'
+        'footer',
+        'button',
+        'main'
     ]
 
 export type Props = {
@@ -25,29 +27,37 @@ export type Props = {
 
 const Container = (props:childrenProps<Props>) => {
 
-    if(!props.tag || props.tag === 'div'){
+    const { tag } = props
+
+    if(!tag || tag === 'div'){
         return <StyleDiv {...props} />
     }
-    if(props.tag === 'article'){
+    if(tag === 'article'){
         return <StyleArticle {...props} />
     }
-    if(props.tag === 'aside'){
+    if(tag === 'aside'){
         return <StyleAside {...props} />
     } 
-    if(props.tag === 'header'){
+    if(tag === 'header'){
         return <StyleHeader {...props} />
     }
-    if(props.tag === 'body'){
+    if(tag === 'body'){
         return <StyleBody {...props} />
     }
-    if(props.tag === 'form'){
+    if(tag === 'form'){
         return <StyleForm {...props} />
     }
-    if(props.tag === 'nav'){
+    if(tag === 'nav'){
         return <StyleNav {...props} />
     }
-    if(props.tag === 'footer'){
+    if(tag === 'footer'){
         return <StyleFooter {...props} />
+    }
+    if(tag === 'button'){
+        return <StyleButton {...props} />
+    }
+    if(tag === 'main'){
+        return <StyleMain {...props} />
     }
 }
 

@@ -8,9 +8,9 @@ const styles = ({
     flex,
     column,
     columns,
-    color,
     bg,
-    rows
+    rows,
+    color,
 } : CreateStyle) => {
     return`
         display: ${flex ? 'flex' : 'grid'};
@@ -22,45 +22,49 @@ const styles = ({
 }
 
 export const StyleDiv = styled.div<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleForm = styled.form<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleArticle = styled.article<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleSection = styled.section<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleAside = styled.aside<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleNav = styled.nav<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleMenu = styled.menu<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleHeader = styled.header<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleMain = styled.main<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleBody = styled.body<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
 `
 
 export const StyleFooter = styled.footer<CreateStyle>`
-    ${props  => styles(props)}
+    ${props => styles({...props, ...props.theme})}
+`
+
+export const StyleButton = styled.button<CreateStyle>`
+    ${props => styles({...props, ...props.theme})}
 `

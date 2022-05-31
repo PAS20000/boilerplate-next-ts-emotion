@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Container from '../src/components/Container'
-import Input from '../src/components/_Sub/Input'
 
 
 const Home = () => {
@@ -10,8 +9,7 @@ const Home = () => {
            <header>
 
            </header>
-           <main>
-            <Container>
+            <Container tag='main'>
                 <h1>
                     1
                 </h1>
@@ -31,7 +29,6 @@ const Home = () => {
                     6
                 </h6>
             </Container>
-           </main>
            <footer>
                
            </footer>
