@@ -1,36 +1,6 @@
 import * as React from 'react'
 import Emotion from './index.styles'
-import { childrenProps } from '../../../../utils/types'
-
-type Tags = [
-        '$ARTICLE$', 
-        '$SECTION$', 
-        '$ASIDE$',
-        '$HEADER$',
-        '$BODY$',
-        '$DIV$',
-        '$FORM$',
-        '$NAV$',
-        '$FOOTER$',
-        '$BUTTON$',
-        '$MAIN$',
-        '$SPAN$',
-        '$H1$',
-        '$H2$',
-        '$H3$',
-        '$H4$',
-        '$H5$',
-        '$H6$',
-        '$INPUT$',
-        '$P$',
-        '$TD$',
-        '$TR$',
-        '$TH$',
-        '$THEAD$',
-        '$TBODY$',
-        '$TFOOT$',
-        '$TABLE$'
-    ]
+import { childrenProps, Tags } from '../../../../utils/types'
 
 export type Props = {
     flex?:boolean
@@ -51,6 +21,9 @@ const PasStyle = (props:childrenProps<Props>) => {
 
     if(!tag || tag === '$DIV$'){
         return <Emotion.StyleDiv {...props} />
+    }
+    if(tag === '$INPUT$'){
+        return <Emotion.StyleInput {...props} />
     }
     if(tag === '$ARTICLE$'){
         return <Emotion.StyleArticle {...props} />
@@ -126,6 +99,18 @@ const PasStyle = (props:childrenProps<Props>) => {
     }
     if(tag === '$TH$'){
         return <Emotion.StyleTh {...props} />
+    }
+    if(tag === '$IMG$'){
+        return <Emotion.StyleImg {...props} />
+    }
+    if(tag === '$A$'){
+        return <Emotion.StyleA {...props} />
+    }
+    if(tag === '$NEXTLINK$'){
+        return <Emotion.StyleNextLink {...props} />
+    }
+    if(tag === '$NEXTIMG$'){
+        return <Emotion.StyleNextImg {...props} />
     }
 }
 

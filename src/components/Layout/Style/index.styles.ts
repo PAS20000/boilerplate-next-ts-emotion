@@ -37,6 +37,10 @@ const StyleDiv = styled.div<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
+const StyleInput = styled.input<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
 const StyleForm = styled.form<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
@@ -89,21 +93,17 @@ const StyleH1 = styled.h1<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
-
 const StyleH2 = styled.h2<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
-
 
 const StyleH3 = styled.h3<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
-
 const StyleH4 = styled.h4<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
-
 
 const StyleH5 = styled.h5<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
@@ -125,28 +125,39 @@ const StyleThead = styled.thead<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
-
 const StyleTbody = styled.tbody<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
-
 
 const StyleTfoot = styled.tfoot<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
-
 const StyleTr = styled.tr<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
-
 
 const StyleTd = styled.td<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
-
 const StyleTh = styled.th<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+const StyleImg = styled.img<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+const StyleA = styled.a<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+const StyleNextLink = styled.div<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+const StyleNextImg = styled.div<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
@@ -178,5 +189,10 @@ export default  {
     StyleTr,
     StyleTh,
     StyleTable,
+    StyleA,
+    StyleImg,
+    StyleNextImg,
+    StyleNextLink,
+    StyleInput,
     Styles,
 }
