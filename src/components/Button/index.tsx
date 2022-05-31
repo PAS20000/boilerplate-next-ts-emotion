@@ -8,11 +8,7 @@ export type Props = {
 
 const Button = (props:childrenProps<Props>) => {
 
-    return(
-        <Style {...props}>
-            {props.children}
-        </Style>
-    )
+    return  <Style {...props} />
 }
 
 export default Button

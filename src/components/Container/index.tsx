@@ -12,11 +12,7 @@ export type Props = {
 
 const Container = (props:childrenProps<Props>) => {
 
-    return(
-        <Style {...props}>
-            {props.children}
-        </Style>
-    )
+    return <Style {...props} />
 }
 
 export default Container
