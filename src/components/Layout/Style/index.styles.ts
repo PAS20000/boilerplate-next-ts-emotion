@@ -31,7 +31,6 @@ const Styles = ({
         ${flex && column ? 'flex-direction: column' : 'flex-direction: row'};
         ${border && `border: ${border}`};
         ${b_Radius && `border-radius: ${b_Radius}`};
-        
         ${animation && `@keyframes show {
             from{
                 opacity: 0;
@@ -40,7 +39,7 @@ const Styles = ({
                 opacity: 1;
             }
         }
-            animation: ${animation};
+            animation: ${animation} 1s;
         `}
 
         background-color: ${bg && bg};
