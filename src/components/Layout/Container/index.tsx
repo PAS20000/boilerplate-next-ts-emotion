@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { childrenProps } from '../../../utils/types'
-import { StyleArticle, StyleAside, StyleBody, StyleButton, StyleDiv, StyleFooter, StyleForm, StyleHeader, StyleMain, StyleNav } from './index.styles'
+import Emotion from './index.styles'
+import { childrenProps } from '../../../../utils/types'
 
 type Tags = [
         'article', 
@@ -13,7 +13,8 @@ type Tags = [
         'nav',
         'footer',
         'button',
-        'main'
+        'main',
+        'span'
     ]
 
 export type Props = {
@@ -30,34 +31,40 @@ const Container = (props:childrenProps<Props>) => {
     const { tag } = props
 
     if(!tag || tag === 'div'){
-        return <StyleDiv {...props} />
+        return <Emotion.StyleDiv {...props} />
     }
     if(tag === 'article'){
-        return <StyleArticle {...props} />
+        return <Emotion.StyleArticle {...props} />
     }
     if(tag === 'aside'){
-        return <StyleAside {...props} />
+        return <Emotion.StyleAside {...props} />
     } 
     if(tag === 'header'){
-        return <StyleHeader {...props} />
+        return <Emotion.StyleHeader {...props} />
     }
     if(tag === 'body'){
-        return <StyleBody {...props} />
+        return <Emotion.StyleBody {...props} />
     }
     if(tag === 'form'){
-        return <StyleForm {...props} />
+        return <Emotion.StyleForm {...props} />
     }
     if(tag === 'nav'){
-        return <StyleNav {...props} />
+        return <Emotion.StyleNav {...props} />
     }
     if(tag === 'footer'){
-        return <StyleFooter {...props} />
+        return <Emotion.StyleFooter {...props} />
     }
     if(tag === 'button'){
-        return <StyleButton {...props} />
+        return <Emotion.StyleButton {...props} />
     }
     if(tag === 'main'){
-        return <StyleMain {...props} />
+        return <Emotion.StyleMain {...props} />
+    }
+    if(tag === 'section'){
+        return <Emotion.StyleSection {...props} />
+    }
+    if(tag === 'span'){
+        return <Emotion.StyleSpan {...props}/>
     }
 }
 

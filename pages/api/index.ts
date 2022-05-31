@@ -5,35 +5,35 @@ export const dataUsers = [
         id:'1',
         name:'teste1',
         email:'teste1@hotmail.com',
-        avatar:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2FDvyzMemes%2Ffotos-animes%2F&psig=AOvVaw3JpQNy3whYk7pd9h2wj8c0&ust=1653996648511000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLi6wuePh_gCFQAAAAAdAAAAABAT',
+        avatar:'https://i.pinimg.com/736x/85/f5/8c/85f58cc999bf7c2aace741f592df9c58.jpg',
         status:'inactive'
     },
     {
         id:'2',
         name:'teste2',
         email:'teste2@hotmail.com',
-        avatar:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.facebook.com%2F1494166654177801%2Fphotos%2Fa.1494167790844354%2F1635512990043166%2F%3Ftype%3D3&psig=AOvVaw3JpQNy3whYk7pd9h2wj8c0&ust=1653996648511000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLi6wuePh_gCFQAAAAAdAAAAABAi',
+        avatar:'https://33.media.tumblr.com/964388f84a8052c301d6309ecea8db05/tumblr_nel87gkcTr1r2gyilo1_500.gif',
         status:'active'
     },
     {
         id:'3',
         name:'teste3',
         email:'teste3@hotmail.com',
-        avatar:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fnarutokonoha.com%2Fimagens-do-anime-naruto-para-imprimir-e-colorir%2F&psig=AOvVaw3JpQNy3whYk7pd9h2wj8c0&ust=1653996648511000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLi6wuePh_gCFQAAAAAdAAAAABAo',
+        avatar:'https://i.pinimg.com/236x/ec/d2/2a/ecd22ad93617a905117156091ebc7bb8.jpg',
         status:'active'
     },
     {
         id:'4',
         name:'teste4',
         email:'teste4@hotmail.com',
-        avatar:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fanmtv.com.br%2Fdemon-slayer-nova-temporada-do-anime-tem-imagens-reveladas%2F&psig=AOvVaw3JpQNy3whYk7pd9h2wj8c0&ust=1653996648511000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLi6wuePh_gCFQAAAAAdAAAAABA5',
+        avatar:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwI0cCsHrPG1OeVhTfyjkBln1dbjpcO5oveG-bB4TBBLC_Iq7QOMGEaZ3IXQtb3egVpg&usqp=CAU',
         status:'inactive'
     },
     {
         id:'5',
         name:'teste5',
         email:'teste5@hotmail.com',
-        avatar:'https://www.google.com/url?sa=i&url=https%3A%2F%2Faniyuki.com%2Fpt%2Favatar-tristes-anime%2F&psig=AOvVaw3JpQNy3whYk7pd9h2wj8c0&ust=1653996648511000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLi6wuePh_gCFQAAAAAdAAAAABBF',
+        avatar:'https://i1.sndcdn.com/avatars-hNxI1fLALMFOBFzd-NXIV5Q-t500x500.jpg',
         status:'active'
     }
 ]

@@ -21,50 +21,70 @@ const styles = ({
     `
 }
 
-export const StyleDiv = styled.div<CreateStyle>`
+const StyleDiv = styled.div<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleForm = styled.form<CreateStyle>`
+const StyleForm = styled.form<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleArticle = styled.article<CreateStyle>`
+const StyleArticle = styled.article<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleSection = styled.section<CreateStyle>`
+const StyleSection = styled.section<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleAside = styled.aside<CreateStyle>`
+const StyleAside = styled.aside<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleNav = styled.nav<CreateStyle>`
+const StyleNav = styled.nav<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleMenu = styled.menu<CreateStyle>`
+const StyleMenu = styled.menu<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleHeader = styled.header<CreateStyle>`
+const StyleHeader = styled.header<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleMain = styled.main<CreateStyle>`
+const StyleMain = styled.main<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleBody = styled.body<CreateStyle>`
+const StyleBody = styled.body<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleFooter = styled.footer<CreateStyle>`
+const StyleFooter = styled.footer<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
 
-export const StyleButton = styled.button<CreateStyle>`
+const StyleButton = styled.button<CreateStyle>`
     ${props => styles({...props, ...props.theme})}
 `
+
+const StyleSpan = styled.span<CreateStyle>`
+    ${props => styles({...props, ...props.theme})}
+`
+
+export default  {
+    StyleArticle,
+    StyleAside,
+    StyleBody,
+    StyleDiv,
+    StyleButton,
+    StyleFooter,
+    StyleForm,
+    StyleHeader,
+    StyleMain,
+    StyleMenu,
+    StyleNav,
+    StyleSection,
+    StyleSpan,
+}
