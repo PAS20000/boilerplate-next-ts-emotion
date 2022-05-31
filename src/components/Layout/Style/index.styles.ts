@@ -19,7 +19,7 @@ const Styles = ({
     border,
     b_Radius,
     tag,
-    className
+    animation,
 } : CreateStyle) : string =>  {
 
     return`
@@ -32,6 +32,17 @@ const Styles = ({
         ${border && `border: ${border}`};
         ${b_Radius && `border-radius: ${b_Radius}`};
         
+        ${animation && `@keyframes show {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+            animation: ${animation};
+        `}
+
         background-color: ${bg && bg};
         width: ${w ? w : 'auto'};
         height: ${h ? h : 'auto'};
