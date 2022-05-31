@@ -24,9 +24,12 @@ export type Props = {
     rows?:string
     bg?:string
     tag?:Tags[number]
+    pd?:string
+    w?:string
+    h?:string
 }
 
-const Container = (props:childrenProps<Props>) => {
+const Style = (props:childrenProps<Props>) => {
 
     const { tag } = props
 
@@ -64,8 +67,8 @@ const Container = (props:childrenProps<Props>) => {
         return <Emotion.StyleSection {...props} />
     }
     if(tag === 'span'){
-        return <Emotion.StyleSpan {...props}/>
+        return <Emotion.StyleSpan {...props} />
     }
 }
 
-export default Container
+export default Style

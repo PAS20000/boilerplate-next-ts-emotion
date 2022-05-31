@@ -3,7 +3,7 @@ import { Theme } from '@emotion/react'
 
 declare module '@emotion/react' {
     export interface Theme {
-      color?: {
+      colors?: {
         primary:string
         secondary: string
         bg:string
@@ -12,7 +12,7 @@ declare module '@emotion/react' {
   }
 
 export const light : Theme = {
-    color: {
+    colors: {
         primary:'pink',
         secondary:'red',
         bg:'#fff'
@@ -20,7 +20,7 @@ export const light : Theme = {
 }
 
 export const dark : Theme = {
-    color: {
+    colors: {
         primary:'red',
         secondary:'pink',
         bg:'#000'

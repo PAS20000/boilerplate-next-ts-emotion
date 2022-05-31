@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next'
 import * as React from 'react'
-import Container from '../src/components/Layout/Container'
+import Style from '../src/components/Layout/Style'
 import { dataAnimes, dataUsers } from './api'
 
 export const getStaticProps : GetStaticProps = async (ctx) => {
@@ -59,28 +59,33 @@ const Home = ({
 
     return(
         <>
-           <Container tag='header'>
+           <Style tag='header'>
 
-           </Container>
-            <Container 
+           </Style>
+            <Style 
                 tag='main'
+                bg='#000'
             >
-               <Container 
+               <Style 
                     tag='section' 
-                    columns='1fr 1fr'
+                    pd='10px'
                 >
                     {datas.users.map(user => 
-                    <Container flex key={user.id}> 
+                    <Style flex 
+                        key={user.id} 
+                        bg='#fff' 
+                        pd='10px'
+                    > 
                         <img src={user.avatar} width='50px' height='50px'/>
                         <h1>
                             {user.name}
                         </h1>
-                    </Container>)}
-               </Container>
-            </Container>
-           <Container tag='footer'>
+                    </Style>)}
+               </Style>
+            </Style>
+           <Style tag='footer'>
                
-           </Container>
+           </Style>
         </>
     )
 }
