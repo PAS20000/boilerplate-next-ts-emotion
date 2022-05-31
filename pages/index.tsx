@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next'
 import * as React from 'react'
-import Style from '../src/components/Layout/Style'
+import PasStyle from '../src/components/Layout/Style'
 import { dataAnimes, dataUsers } from './api'
 
 export const getStaticProps : GetStaticProps = async (ctx) => {
@@ -59,33 +59,35 @@ const Home = ({
 
     return(
         <>
-           <Style tag='header'>
+           <PasStyle tag='HEADER'>
 
-           </Style>
-            <Style 
-                tag='main'
-                bg='#000'
+           </PasStyle>
+            <PasStyle 
+                tag='MAIN'
             >
-               <Style 
-                    tag='section' 
+               <PasStyle 
+                    tag='SECTION' 
                     pd='10px'
+                    bg='#000'
                 >
                     {datas.users.map(user => 
-                    <Style flex 
-                        key={user.id} 
-                        bg='#fff' 
-                        pd='10px'
-                    > 
-                        <img src={user.avatar} width='50px' height='50px'/>
-                        <h1>
-                            {user.name}
-                        </h1>
-                    </Style>)}
-               </Style>
-            </Style>
-           <Style tag='footer'>
+                        <PasStyle flex 
+                            key={user.id} 
+                            bg='#fff' 
+                            pd='10px'
+                            mg='10px'
+                        > 
+                            <img src={user.avatar} width='50px' height='50px'/>
+                            <h1>
+                                {user.name}
+                            </h1>
+                        </PasStyle>
+                    )}
+               </PasStyle>
+            </PasStyle>
+           <PasStyle tag='FOOTER'>
                
-           </Style>
+           </PasStyle>
         </>
     )
 }

@@ -3,18 +3,18 @@ import Emotion from './index.styles'
 import { childrenProps } from '../../../../utils/types'
 
 type Tags = [
-        'article', 
-        'section', 
-        'aside',
-        'header',
-        'body',
-        'div',
-        'form',
-        'nav',
-        'footer',
-        'button',
-        'main',
-        'span'
+        'ARTICLE', 
+        'SECTION', 
+        'ASIDE',
+        'HEADER',
+        'BODY',
+        'DIV',
+        'FORM',
+        'NAV',
+        'FOOTER',
+        'BUTTON',
+        'MAIN',
+        'SPAN'
     ]
 
 export type Props = {
@@ -27,48 +27,49 @@ export type Props = {
     pd?:string
     w?:string
     h?:string
+    mg?:string
 }
 
-const Style = (props:childrenProps<Props>) => {
+const PasStyle = (props:childrenProps<Props>) => {
 
     const { tag } = props
 
-    if(!tag || tag === 'div'){
+    if(!tag || tag === 'DIV'){
         return <Emotion.StyleDiv {...props} />
     }
-    if(tag === 'article'){
+    if(tag === 'ARTICLE'){
         return <Emotion.StyleArticle {...props} />
     }
-    if(tag === 'aside'){
+    if(tag === 'ASIDE'){
         return <Emotion.StyleAside {...props} />
     } 
-    if(tag === 'header'){
+    if(tag === 'HEADER'){
         return <Emotion.StyleHeader {...props} />
     }
-    if(tag === 'body'){
+    if(tag === 'BODY'){
         return <Emotion.StyleBody {...props} />
     }
-    if(tag === 'form'){
+    if(tag === 'FORM'){
         return <Emotion.StyleForm {...props} />
     }
-    if(tag === 'nav'){
+    if(tag === 'NAV'){
         return <Emotion.StyleNav {...props} />
     }
-    if(tag === 'footer'){
+    if(tag === 'FOOTER'){
         return <Emotion.StyleFooter {...props} />
     }
-    if(tag === 'button'){
+    if(tag === 'BUTTON'){
         return <Emotion.StyleButton {...props} />
     }
-    if(tag === 'main'){
+    if(tag === 'MAIN'){
         return <Emotion.StyleMain {...props} />
     }
-    if(tag === 'section'){
+    if(tag === 'SECTION'){
         return <Emotion.StyleSection {...props} />
     }
-    if(tag === 'span'){
+    if(tag === 'SPAN'){
         return <Emotion.StyleSpan {...props} />
     }
 }
 
-export default Style
+export default PasStyle

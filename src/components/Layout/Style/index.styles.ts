@@ -13,7 +13,8 @@ const Styles = ({
     colors,
     pd,
     w,
-    h
+    h,
+    mg
 } : CreateStyle) => {
     return`
         display: ${flex ? 'flex' : 'grid'};
@@ -22,13 +23,15 @@ const Styles = ({
         ${!flex && rows && `grid-template-rows: ${rows}`};
         ${flex && column ? 'flex-direction: column' : 'flex-direction: row'};
         background-color: ${bg ? bg : colors.bg};
-        width: ${w ? w:'auto'};
+        width: ${w ? w : 'auto'};
+        height: ${h ? h : 'auto'};
         padding: ${pd && pd};
+        margin: ${mg && mg};
         
     `
 }
 const sadasd = styled.div`
-    
+  
 `
 const StyleDiv = styled.div<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
