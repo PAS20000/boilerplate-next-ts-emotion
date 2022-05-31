@@ -3,11 +3,13 @@ import { ThemeContext, ThemeCTX } from '../../contexts/ThemeContext'
 
 
 const useThemeCTX = () : ThemeCTX  => {
-    const { mode, setMode } = React.useContext(ThemeContext)
+    const { mode, setMode, dark, light } = React.useContext(ThemeContext)
 
     return {
         mode,
-        setMode
+        setMode,
+        dark,
+        light
     }
 }
 

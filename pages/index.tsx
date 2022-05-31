@@ -1,11 +1,9 @@
 import * as React from 'react'
 import Container from '../src/components/Container'
-import useThemeCTX from '../src/hooks/useThemeCTX'
+import Input from '../src/components/_Sub/Input'
 
 
 const Home = () => {
-
-    const { mode, setMode } = useThemeCTX()
 
     return(
         <>
@@ -14,9 +12,6 @@ const Home = () => {
            </header>
            <main>
             <Container>
-                <button onClick={() => {}}>
-
-                </button>
                 <h1>
                     1
                 </h1>

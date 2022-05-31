@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ThemeProvider } from '@emotion/react' 
+import { Theme, ThemeProvider } from '@emotion/react' 
 import { defaultProps, SetState } from '../../../utils/types'
 import { dark, light } from '../../theme/index.styles'
 
@@ -8,6 +8,8 @@ type mode = 'dark' | 'light'
 export type ThemeCTX = {
     mode:mode
     setMode:SetState<mode>
+    light:Theme
+    dark:Theme
 }
 
 
@@ -20,7 +22,7 @@ const ThemeProviderApp = ({
     const [mode, setMode] = React.useState<mode>('light')
 
    return(
-        <ThemeContext.Provider value={{mode, setMode}}>
+        <ThemeContext.Provider value={{mode, setMode, light, dark}}>
             <ThemeProvider theme={mode === 'light' ? light : dark}>
                 {children}
             </ThemeProvider>

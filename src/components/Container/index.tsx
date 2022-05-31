@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { childrenProps } from '../../../utils/types'
-import { Style } from './index.styles'
+import { StyleArticle, StyleAside, StyleDiv } from './index.styles'
 
 export type Props = {
     flex?:boolean
@@ -8,11 +8,29 @@ export type Props = {
     columns?:string
     rows?:string
     bg?:string
+    tag?:'article' | 'section' | 'aside' | 'header' | 'body' | 'div' | 'form'
 }
 
 const Container = (props:childrenProps<Props>) => {
 
-    return <Style {...props} />
+    if(!props.tag || props.tag === 'div'){
+        return <StyleDiv {...props} />
+    }
+    if(props.tag === 'article'){
+        return <StyleArticle {...props} />
+    }
+    if(props.tag === 'aside'){
+        return <StyleAside {...props} />
+    } 
+    if(props.tag === 'header'){
+        return <StyleArticle {...props} />
+    }
+    if(props.tag === 'body'){
+        return <StyleDiv {...props} />
+    }
+    if(props.tag === 'form'){
+        return <StyleDiv {...props} />
+    }
 }
 
 export default Container

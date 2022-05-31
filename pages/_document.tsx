@@ -8,8 +8,8 @@ const Body = styled.body`
   background-color: gray;
 `
 
-export default class Document extends NextDocument {
-  render() {
+class Document extends NextDocument {
+    render(){
     return (
       <Html lang='pt'>
         <Head />
@@ -21,3 +21,5 @@ export default class Document extends NextDocument {
     )
   }
 }
+
+export default Document
