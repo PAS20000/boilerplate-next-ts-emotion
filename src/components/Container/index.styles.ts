@@ -1,5 +1,5 @@
 import { Theme } from "@emotion/react";
-import styled, { CreateStyledComponent } from "@emotion/styled";
+import styled from "@emotion/styled";
 import { Props } from ".";
 
 type CreateStyle = Props & Theme
@@ -21,7 +21,6 @@ const styles = ({
     `
 }
 
-
 export const StyleDiv = styled.div<CreateStyle>`
     ${props  => styles(props)}
 `
@@ -42,6 +41,26 @@ export const StyleAside = styled.aside<CreateStyle>`
     ${props  => styles(props)}
 `
 
-export const Style = styled.div<CreateStyle>`
+export const StyleNav = styled.nav<CreateStyle>`
+    ${props  => styles(props)}
+`
+
+export const StyleMenu = styled.menu<CreateStyle>`
+    ${props  => styles(props)}
+`
+
+export const StyleHeader = styled.header<CreateStyle>`
+    ${props  => styles(props)}
+`
+
+export const StyleMain = styled.main<CreateStyle>`
+    ${props  => styles(props)}
+`
+
+export const StyleBody = styled.body<CreateStyle>`
+    ${props  => styles(props)}
+`
+
+export const StyleFooter = styled.footer<CreateStyle>`
     ${props  => styles(props)}
 `

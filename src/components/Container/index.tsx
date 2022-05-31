@@ -1,6 +1,18 @@
 import * as React from 'react'
 import { childrenProps } from '../../../utils/types'
-import { StyleArticle, StyleAside, StyleDiv } from './index.styles'
+import { StyleArticle, StyleAside, StyleBody, StyleDiv, StyleFooter, StyleForm, StyleHeader, StyleNav } from './index.styles'
+
+type Tags = [
+        'article', 
+        'section', 
+        'aside',
+        'header',
+        'body',
+        'div',
+        'form',
+        'nav',
+        'footer'
+    ]
 
 export type Props = {
     flex?:boolean
@@ -8,7 +20,7 @@ export type Props = {
     columns?:string
     rows?:string
     bg?:string
-    tag?:'article' | 'section' | 'aside' | 'header' | 'body' | 'div' | 'form'
+    tag?:Tags[number]
 }
 
 const Container = (props:childrenProps<Props>) => {
@@ -23,13 +35,19 @@ const Container = (props:childrenProps<Props>) => {
         return <StyleAside {...props} />
     } 
     if(props.tag === 'header'){
-        return <StyleArticle {...props} />
+        return <StyleHeader {...props} />
     }
     if(props.tag === 'body'){
-        return <StyleDiv {...props} />
+        return <StyleBody {...props} />
     }
     if(props.tag === 'form'){
-        return <StyleDiv {...props} />
+        return <StyleForm {...props} />
+    }
+    if(props.tag === 'nav'){
+        return <StyleNav {...props} />
+    }
+    if(props.tag === 'footer'){
+        return <StyleFooter {...props} />
     }
 }
 
