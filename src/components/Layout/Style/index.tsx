@@ -24,6 +24,16 @@ export type Props = {
     className?:string
     id?:string
     animation?:Animations[number]
+    f_size?:string
+    f_weight?:string
+    f_family?:string
+    t_transform?:string
+    transform?:string
+    transition?:string
+    op?:string,
+    _media?:string
+    _hover?:any
+    _focus?:any
 }
 
 const PasStyle = (props:childrenProps<Props>) => {
