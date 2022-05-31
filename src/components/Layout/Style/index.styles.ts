@@ -85,6 +85,71 @@ const StyleSpan = styled.span<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
+const StyleH1 = styled.h1<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleH2 = styled.h2<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleH3 = styled.h3<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleH4 = styled.h4<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleH5 = styled.h5<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+const StyleH6 = styled.h6<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+const StyleP = styled.p<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+const StyleTable = styled.thead<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+const StyleThead = styled.thead<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleTbody = styled.tbody<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleTfoot = styled.tfoot<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleTr = styled.tr<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleTd = styled.td<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
+
+const StyleTh = styled.th<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
 export default  {
     StyleArticle,
     StyleAside,
@@ -99,5 +164,19 @@ export default  {
     StyleNav,
     StyleSection,
     StyleSpan,
+    StyleH1,
+    StyleH2,
+    StyleH3,
+    StyleH4,
+    StyleH5,
+    StyleH6,
+    StyleP,
+    StyleThead,
+    StyleTbody,
+    StyleTfoot,
+    StyleTd,
+    StyleTr,
+    StyleTh,
+    StyleTable,
     Styles,
 }

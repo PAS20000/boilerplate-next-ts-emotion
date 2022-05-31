@@ -59,14 +59,14 @@ const Home = ({
 
     return(
         <>
-           <PasStyle tag='HEADER'>
+           <PasStyle tag='$HEADER$'>
 
            </PasStyle>
             <PasStyle 
-                tag='MAIN'
+                tag='$MAIN$'
             >
                <PasStyle 
-                    tag='SECTION' 
+                    tag='$SECTION$' 
                     pd='10px'
                     bg='#000'
                 >
@@ -85,7 +85,7 @@ const Home = ({
                     )}
                </PasStyle>
             </PasStyle>
-           <PasStyle tag='FOOTER'>
+           <PasStyle tag='$FOOTER$'>
                
            </PasStyle>
         </>
