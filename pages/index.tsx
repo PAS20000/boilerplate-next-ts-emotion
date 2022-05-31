@@ -6,7 +6,7 @@ import { dataAnimes, dataUsers } from './api'
 export const getStaticProps : GetStaticProps = async (ctx) => {
     
     try {
-        //const resp = await axiosConfig(`users/${params.id}/`)
+        //const resp = await axiosConfig(`users/{params.id}/`)
         const respAnimes = dataAnimes
         const respUsers = dataUsers
         return {
@@ -59,35 +59,38 @@ const Home = ({
 
     return(
         <>
-           <PasStyle tag='$HEADER$'>
+           <PasStyle tag='HEADER'>
 
            </PasStyle>
             <PasStyle 
-                tag='$MAIN$'
+                tag='MAIN'
             >
-               <PasStyle grid columns='1fr 1fr'
-                    tag='$SECTION$' 
+               <PasStyle grid columns='1fr'
+                    tag='SECTION' 
                     pd='10px'
                     bg='#000'
                 >
                     {datas.users.map(user => 
                         <PasStyle flex
-                            tag='$NEXTLINK$'
+                            tag='NEXTLINK'
                             href={user.avatar}
                             key={user.id} 
                             bg='gray' 
                             pd='10px'
                             mg='10px'
+                            bRadius='8px'
                         > 
                             <PasStyle 
-                                tag='$NEXTIMG$'
+                                tag='IMG'
+                                className='testeIMG'
                                 src={user.avatar}
                                 w='50px'
                                 h='50px'
+                                mg='10px'
                                 bRadius='50%'
                             />
                             <PasStyle 
-                                tag='$H1$'
+                                tag='H1'
                             >
                                 {user.name}
                             </PasStyle>
@@ -95,7 +98,7 @@ const Home = ({
                     )}
                </PasStyle>
             </PasStyle>
-           <PasStyle tag='$FOOTER$'>
+           <PasStyle tag='FOOTER'>
                
            </PasStyle>
         </>

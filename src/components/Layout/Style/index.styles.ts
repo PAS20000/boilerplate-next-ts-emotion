@@ -18,7 +18,8 @@ const Styles = ({
     grid,
     border,
     bRadius,
-    tag
+    tag,
+    className
 } : CreateStyle) : string =>  {
 
     return`
@@ -37,7 +38,7 @@ const Styles = ({
         padding: ${pd && pd};
         margin: ${mg && mg};
 
-        ${tag === '$NEXTLINK$' && `a{
+        ${tag === 'NEXTLINK' && `a{
             ${flex && 'display: flex'};
             ${grid && 'display: grid'};
             ${flex && 'flex-wrap: wrap'};
@@ -52,7 +53,8 @@ const Styles = ({
             height: ${h ? h : 'auto'};
             padding: ${pd && pd};
             margin: ${mg && mg};
-        }`}
+        }`
+    }
     `
 }
 
