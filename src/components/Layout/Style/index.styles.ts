@@ -161,6 +161,10 @@ const StyleNextImg = styled.div<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
+const StyleTextArea = styled.textarea<CreateStyle>`
+    ${props => Styles({...props, ...props.theme})}
+`
+
 export default  {
     StyleArticle,
     StyleAside,
@@ -194,5 +198,6 @@ export default  {
     StyleNextImg,
     StyleNextLink,
     StyleInput,
+    StyleTextArea,
     Styles,
 }
