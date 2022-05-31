@@ -1,18 +1,26 @@
 import * as React from 'react'
 import Emotion from './index.styles'
 import { childrenProps, Tags } from '../../../../utils/types'
+import NextImage from '../../../Contracts/NextImage'
+import NextLink from '../../../Contracts/NextLink'
 
 export type Props = {
+    grid?:boolean
     flex?:boolean
     column?:boolean
     columns?:string
     rows?:string
     bg?:string
-    tag?:Tags[number]
     pd?:string
     w?:string
     h?:string
     mg?:string
+    tag?:Tags[number]
+    src?:string
+    href?:string
+    border?:string
+    bRadius?:string
+    target?:string
 }
 
 const PasStyle = (props:childrenProps<Props>) => {
@@ -107,10 +115,25 @@ const PasStyle = (props:childrenProps<Props>) => {
         return <Emotion.StyleA {...props} />
     }
     if(tag === '$NEXTLINK$'){
-        return <Emotion.StyleNextLink {...props} />
+        return (
+            <Emotion.StyleNextLink {...props} >
+                <NextLink href={props.href} target={props.target}>
+                    {props.children}
+                </NextLink>
+            </Emotion.StyleNextLink>
+        )
     }
     if(tag === '$NEXTIMG$'){
-        return <Emotion.StyleNextImg {...props} />
+        return (
+            <Emotion.StyleNextImg {...props}>
+                <NextImage
+                    alt={props.alt}
+                    src={props.src}
+                    height={props.h}
+                    width={props.w}
+                />
+            </Emotion.StyleNextImg>
+        )
     }
 }
 

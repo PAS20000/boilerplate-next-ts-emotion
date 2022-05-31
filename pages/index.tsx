@@ -65,22 +65,32 @@ const Home = ({
             <PasStyle 
                 tag='$MAIN$'
             >
-               <PasStyle 
+               <PasStyle grid columns='1fr 1fr'
                     tag='$SECTION$' 
                     pd='10px'
                     bg='#000'
                 >
                     {datas.users.map(user => 
-                        <PasStyle flex 
+                        <PasStyle flex
+                            tag='$NEXTLINK$'
+                            href={user.avatar}
                             key={user.id} 
-                            bg='#fff' 
+                            bg='gray' 
                             pd='10px'
                             mg='10px'
                         > 
-                            <img src={user.avatar} width='50px' height='50px'/>
-                            <h1>
+                            <PasStyle 
+                                tag='$NEXTIMG$'
+                                src={user.avatar}
+                                w='50px'
+                                h='50px'
+                                bRadius='50%'
+                            />
+                            <PasStyle 
+                                tag='$H1$'
+                            >
                                 {user.name}
-                            </h1>
+                            </PasStyle>
                         </PasStyle>
                     )}
                </PasStyle>

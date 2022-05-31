@@ -1,6 +1,6 @@
 import * as React from 'react'
 import AuthProvider from './AuthContext'
-import ThemeProviderApp from './ThemeContext'
+import PasStyleThemeProvider from './ThemeContext'
 
 type Props = {
     children:React.ReactNode
@@ -11,11 +11,11 @@ export const GlobalProvider = ({
 } : Props) => {
 
     return(
-        <ThemeProviderApp>
+        <PasStyleThemeProvider>
             <AuthProvider>
                 {children}
             </AuthProvider>
-        </ThemeProviderApp>
+        </PasStyleThemeProvider>
     )
 }
 
