@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Emotion from './index.styles'
-import { Animations, childrenProps, Tags } from '../../../../utils/types'
+import { Animations, childrenProps, Styles, Tags } from '../../../../utils/types'
 import NextImage from '../../../Contracts/NextImage'
 import NextLink from '../../../Contracts/NextLink'
 
@@ -31,9 +31,9 @@ export type Props = {
     transform?:string
     transition?:string
     op?:string,
-    _media?:string
-    _hover?:any
-    _focus?:any
+    _media?:Styles
+    _hover?:Styles
+    _focus?:Styles
 }
 
 const PasStyle = (props:childrenProps<Props>) => {
