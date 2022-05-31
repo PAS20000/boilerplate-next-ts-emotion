@@ -1,9 +1,8 @@
-import { Theme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { Props } from ".."
 import { Styles } from "../../../../../utils/types"
 
-export type TCreateStyle = Props & Theme
+export type TCreateStyle = Props
 
 const CreateStyles = ({
     flex,
@@ -26,6 +25,7 @@ const CreateStyles = ({
     transform,
     transition,
     op,
+    color,
 } : Styles) => {
     return`
         ${animation && `@keyframes show {
@@ -73,8 +73,15 @@ const CreateStyle = (props: TCreateStyle) : string =>  {
         ${tag === 'NEXTLINK' && `a{
             ${CreateStyles({...props})}
 
+           
             ${_hover && `:hover{
                 ${CreateStyles({..._hover})}
+            }`}
+            ${_focus && `:focus{
+                ${CreateStyles({..._focus})}
+            }`}
+            ${_media && `:hover{
+                
             }`}
         }`
     }
@@ -89,7 +96,7 @@ const CreateStyle = (props: TCreateStyle) : string =>  {
             ${CreateStyles({..._focus})}
         }`}
         ${_media && `:hover{
-            ${CreateStyles({..._media})}
+            
         }`}
     `}
 `}
@@ -97,12 +104,5 @@ const CreateStyle = (props: TCreateStyle) : string =>  {
 export default CreateStyle
 
 export const Testes = styled.div`
-    background-color: red;
-    :hover{
-        transition: 1s;
-        background-color: blue;
-    }
-    :focus{
-
-    }
+    color: blue;
 `

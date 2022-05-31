@@ -43,6 +43,7 @@ export type Styles = {
     transform?:string
     transition?:string
     op?:string,
+    color?:string
 }
 
 export type childrenProps<T> = React.PropsWithChildren<T & DefaultProps>

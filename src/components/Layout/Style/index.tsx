@@ -34,6 +34,7 @@ export type Props = {
     _media?:Styles
     _hover?:Styles
     _focus?:Styles
+    color?:string
 }
 
 const PasStyle = (props:childrenProps<Props>) => {
