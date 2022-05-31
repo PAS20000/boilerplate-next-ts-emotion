@@ -17,7 +17,7 @@ const Styles = ({
     mg,
     grid,
     border,
-    bRadius,
+    b_Radius,
     tag,
     className
 } : CreateStyle) : string =>  {
@@ -30,7 +30,7 @@ const Styles = ({
         ${!flex && rows && `grid-template-rows: ${rows}`};
         ${flex && column ? 'flex-direction: column' : 'flex-direction: row'};
         ${border && `border: ${border}`};
-        ${bRadius && `border-radius: ${bRadius}`};
+        ${b_Radius && `border-radius: ${b_Radius}`};
         
         background-color: ${bg && bg};
         width: ${w ? w : 'auto'};
@@ -46,7 +46,7 @@ const Styles = ({
             ${!flex && rows && `grid-template-rows: ${rows}`};
             ${flex && column ? 'flex-direction: column' : 'flex-direction: row'};
             ${border && `border: ${border}`};
-            ${bRadius && `border-radius: ${bRadius}`};
+            ${b_Radius && `border-radius: ${b_Radius}`};
             
             background-color: ${bg && bg};
             width: ${w ? w : 'auto'};
@@ -205,14 +205,6 @@ const StyleA = styled.a<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
 
-const StyleNextLink = styled.span<CreateStyle>`
-    ${props => Styles({...props, ...props.theme})}
-`
-
-const StyleNextImg = styled.div<CreateStyle>`
-    ${props => Styles({...props, ...props.theme})}
-`
-
 const StyleTextArea = styled.textarea<CreateStyle>`
     ${props => Styles({...props, ...props.theme})}
 `
@@ -247,8 +239,6 @@ export default  {
     StyleTable,
     StyleA,
     StyleImg,
-    StyleNextImg,
-    StyleNextLink,
     StyleInput,
     StyleTextArea,
     Styles,

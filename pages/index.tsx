@@ -78,16 +78,15 @@ const Home = ({
                             bg='gray' 
                             pd='10px'
                             mg='10px'
-                            bRadius='8px'
+                            b_Radius='8px'
                         > 
                             <PasStyle 
                                 tag='IMG'
-                                className='testeIMG'
                                 src={user.avatar}
                                 w='50px'
                                 h='50px'
                                 mg='10px'
-                                bRadius='50%'
+                                b_Radius='50%'
                             />
                             <PasStyle 
                                 tag='H1'

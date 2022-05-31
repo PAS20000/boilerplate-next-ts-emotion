@@ -19,7 +19,7 @@ export type Props = {
     src?:string
     href?:string
     border?:string
-    bRadius?:string
+    b_Radius?:string
     target?:string
     className?:string
     id?:string
@@ -118,23 +118,23 @@ const PasStyle = (props:childrenProps<Props>) => {
     }
     if(tag === 'NEXTLINK'){
         return (
-            <Emotion.StyleNextLink {...props} >
+            <Emotion.StyleDiv {...props} >
                 <NextLink href={props.href} target={props.target}>
                     {props.children}
                 </NextLink>
-            </Emotion.StyleNextLink>
+            </Emotion.StyleDiv>
         )
     }
     if(tag === 'NEXTIMG'){
         return (
-            <Emotion.StyleNextImg {...props}>
+            <Emotion.StyleDiv {...props}>
                 <NextImage
                     alt={props.alt}
                     src={props.src}
                     height={props.h}
                     width={props.w}
                 />
-            </Emotion.StyleNextImg>
+            </Emotion.StyleDiv>
         )
     }
 }
