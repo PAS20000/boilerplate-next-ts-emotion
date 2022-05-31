@@ -16,6 +16,12 @@ export type DefaultProps = {
 export type Styles = {
     grid?:boolean
     flex?:boolean
+    between?:boolean
+    end?:boolean
+    around?:boolean
+    evenly?:boolean
+    start?:boolean
+    center?:boolean
     column?:boolean
     columns?:string
     rows?:string
@@ -37,10 +43,12 @@ export type Styles = {
     f_weight?:string
     f_family?:string
     t_transform?:string
+    t_decoration?:string
     transform?:string
     transition?:string
     op?:string,
     color?:string
+    b_Color?:string
 }
 
 export type childrenProps<T> = React.PropsWithChildren<T & DefaultProps>

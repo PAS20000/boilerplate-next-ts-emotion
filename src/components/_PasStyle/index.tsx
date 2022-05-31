@@ -1,12 +1,18 @@
 import * as React from 'react'
 import Emotion from './index.styles'
 import { Animations, childrenProps, Styles, Tags } from './types'
-import NextImage from '../../../Contracts/NextImage'
-import NextLink from '../../../Contracts/NextLink'
+import NextImage from '../../Contracts/NextImage'
+import NextLink from '../../Contracts/NextLink'
 
 export type Props = {
     grid?:boolean
     flex?:boolean
+    between?:boolean
+    around?:boolean
+    evenly?:boolean
+    start?:boolean
+    center?:boolean
+    end?:boolean
     column?:boolean
     columns?:string
     rows?:string
@@ -20,6 +26,7 @@ export type Props = {
     href?:string
     border?:string
     b_Radius?:string
+    b_Color?:string
     target?:string
     className?:string
     id?:string
@@ -28,6 +35,7 @@ export type Props = {
     f_weight?:string
     f_family?:string
     t_transform?:string
+    t_decoration?:string
     transform?:string
     transition?:string
     op?:string,
