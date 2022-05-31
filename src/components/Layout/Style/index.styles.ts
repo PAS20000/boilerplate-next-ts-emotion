@@ -1,37 +1,6 @@
 import styled from "@emotion/styled";
 import CreateStyle, { TCreateStyle } from "./CreateStyle/index.styles";
 
-
-
-
-
-const teste = styled.div`
-  font-size: 123px;
-  font-family: 1231px;
-  font-weight: 1341;
-  text-transform: capitalize;
-  transform: translate();
-  transition: 1s;
-  opacity: 1;
-  @media(max-width: 900px){
-
-  }
-  @keyframes show {
-      from{
-          opacity: 0;
-      }
-      to{
-          opacity: 1;
-      }
-  }
-  animation: show 1s;
-  :hover{
-
-  }
-  :focus{
-
-  }
-`
 const StyleDiv = styled.div<TCreateStyle>`
     ${props => CreateStyle({...props})}
 `

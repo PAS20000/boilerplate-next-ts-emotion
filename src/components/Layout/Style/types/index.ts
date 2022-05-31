@@ -1,7 +1,4 @@
 import * as React from 'react'
-import { TCreateStyle } from '../../src/components/Layout/Style/CreateStyle/index.styles'
-
-export type SetState<T> = React.Dispatch<React.SetStateAction<T>>
 
 export type DefaultProps = {
     children?:React.ReactNode

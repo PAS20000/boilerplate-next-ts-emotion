@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Emotion from './index.styles'
-import { Animations, childrenProps, Styles, Tags } from '../../../../utils/types'
+import { Animations, childrenProps, Styles, Tags } from './types'
 import NextImage from '../../../Contracts/NextImage'
 import NextLink from '../../../Contracts/NextLink'
 

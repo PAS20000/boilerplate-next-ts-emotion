@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { Theme, ThemeProvider } from '@emotion/react' 
 import { dark, light } from '../../theme/index.styles'
-import { DefaultProps, SetState } from '../../../utils/types'
+import { PropsCTXdefault, SetState } from '../types'
+
 
 type mode = 'dark' | 'light'
 
@@ -18,7 +19,7 @@ export const PasStyleThemeContext = React.createContext<ThemeCTX>(null)
 
 const PasStyleThemeProvider = ({
     children
-} : DefaultProps) => {
+} : PropsCTXdefault) => {
     const [mode, setMode] = React.useState<mode>('light')
 
    return(

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { defaultProps, SetState } from '../../../utils/types'
+import { PropsCTXdefault, SetState } from '../types'
 
 export type DataCTX = {
     data: Object[]
@@ -10,7 +10,7 @@ export const DataContext = React.createContext<DataCTX>(null)
 
 const DataProvider = ({
     children
-} : defaultProps) => {
+} : PropsCTXdefault) => {
     const [data, setData] = React.useState<Object[]>()
     
     React.useEffect(() => {

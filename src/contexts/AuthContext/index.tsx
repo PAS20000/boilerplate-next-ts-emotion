@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { defaultProps, SetState } from '../../../utils/types'
+import { PropsCTXdefault, SetState } from '../types'
 
 export type AuthCTX = {
     auth:boolean
@@ -10,7 +10,7 @@ export const AuthContext = React.createContext<AuthCTX>(null)
 
 const AuthProvider = ({
     children
-} : defaultProps) => {
+} : PropsCTXdefault) => {
     const [auth, setAuth] = React.useState<boolean>(false)
     
    return(
