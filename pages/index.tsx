@@ -68,17 +68,18 @@ const Home = ({
                <PasStyle grid columns='1fr 1fr'
                     tag='SECTION' 
                     pd='20px'
-                    bg='red'
+                    bg='#fefefe'
                 >
                     {datas.users.map(user => 
                         <PasStyle flex
                             tag='NEXTLINK'
                             href={user.avatar}
                             key={user.id} 
-                            bg='black' 
+                            bg='#fff' 
                             pd='10px'
                             mg='10px'
                             b_Radius='8px'
+                            border='solid 2px'
                         > 
                             <PasStyle 
                                 tag='IMG'
