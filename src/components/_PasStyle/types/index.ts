@@ -49,6 +49,9 @@ export type Styles = {
     op?:string,
     color?:string
     b_Color?:string
+    cursor?:string
+    position?:string
+    shadow?:string
 }
 
 export type childrenProps<T> = React.PropsWithChildren<T & DefaultProps>
@@ -85,6 +88,8 @@ export type Tags = [
     'IMG',
     'NEXTLINK',
     'NEXTIMG',
+    'CODE',
+    'LABEL'
 ]
 
 export type Animations = [

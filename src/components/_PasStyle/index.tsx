@@ -39,10 +39,13 @@ export type Props = {
     transform?:string
     transition?:string
     op?:string,
+    shadow?:string
     _media?:Styles
     _hover?:Styles
     _focus?:Styles
     color?:string
+    cursor?:string
+    position?:string
 }
 
 const PasStyle = (props:childrenProps<Props>) => {
@@ -135,6 +138,12 @@ const PasStyle = (props:childrenProps<Props>) => {
     }
     if(tag === 'A'){
         return <Emotion.StyleA {...props} />
+    }
+    if(tag === 'CODE'){
+        return <Emotion.StyleCode {...props} />
+    }
+    if(tag === 'LABEL'){
+        return <Emotion.StyleLabel {...props} />
     }
     if(tag === 'NEXTLINK'){
         return (

@@ -1,6 +1,10 @@
 import { GetStaticProps } from 'next'
 import * as React from 'react'
+import Code from '../src/components/Code'
+import Gen from '../src/components/Gen'
+import NavBar from '../src/components/NavBar'
 import PasStyle from '../src/components/_PasStyle'
+import useThemeCTX from '../src/hooks/useThemeCTX'
 import { dataAnimes, dataUsers } from './api'
 
 export const getStaticProps : GetStaticProps = async (ctx) => {
@@ -12,8 +16,8 @@ export const getStaticProps : GetStaticProps = async (ctx) => {
         return {
             props: {
               datas:{
-                  animes:dataAnimes,
-                  users:dataUsers
+                  animes:respAnimes,
+                  users:respUsers
               },
             },
           }
@@ -32,18 +36,20 @@ export const getStaticProps : GetStaticProps = async (ctx) => {
     }
 }
 
-type Animes = {
-    id:string
-    name:string
-    thumb:string
+export type Animes = {
+    id?:string
+    name?:string
+    thumb?:string
 }
 
-type Users = {
-    id:string
-    name:string
-    email:string
-    avatar:string
-    status:string
+export type Users = {
+    id?:string
+    name?:string
+    email?:string
+    avatar?:string
+    status?:string
+    animes_like?:Array<Animes>
+    
 }
 
 type Props = {
@@ -57,55 +63,16 @@ const Home = ({
     datas
 } : Props) => {
 
+    const { theme } = useThemeCTX()
+
     return(
         <>
            <PasStyle tag='HEADER'>
+                <NavBar />
            </PasStyle>
-            <PasStyle 
-                tag='MAIN'
-            >
+            <PasStyle tag='MAIN'>
+               <Gen />
                
-               <PasStyle grid columns='1fr 1fr'
-                    tag='SECTION' 
-                    pd='20px'
-                    bg='#fefefe'
-                >
-                    {datas.users.map(user => 
-                        <PasStyle flex center
-                            tag='NEXTLINK'
-                            href={user.avatar}
-                            key={user.id} 
-                            bg='#fff' 
-                            pd='10px'
-                            mg='10px'
-                            b_Radius='8px'
-                            border='solid 2px'
-                            t_decoration='none'
-                            color='#800080'
-                            t_transform='capitalize'
-                            _hover={{
-                                transition:'1s',
-                                bg:'#8a2be2',
-                                color: '#fff',
-                                b_Color:'#800080',
-                            }}
-                        > 
-                            <PasStyle 
-                                tag='IMG'
-                                src={user.avatar}
-                                w='50px'
-                                h='50px'
-                                mg='10px'
-                                b_Radius='50%'
-                            />
-                            <PasStyle 
-                                tag='H1'
-                            >
-                                {user.name}
-                            </PasStyle>
-                        </PasStyle>
-                    )}
-               </PasStyle>
             </PasStyle>
            <PasStyle tag='FOOTER'>
                

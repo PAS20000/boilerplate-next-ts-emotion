@@ -9,8 +9,9 @@ type mode = 'dark' | 'light'
 export type ThemeCTX = {
     mode:mode
     setMode:SetState<mode>
-    light:Theme
-    dark:Theme
+    theme:Theme
+    setTheme:SetState<Theme>
+    changeMode:Function
 }
 
 
@@ -20,11 +21,22 @@ export const PasStyleThemeContext = React.createContext<ThemeCTX>(null)
 const PasStyleThemeProvider = ({
     children
 } : PropsCTXdefault) => {
-    const [mode, setMode] = React.useState<mode>('light')
+
+    const [mode, setMode] = React.useState<mode>('dark')
+
+    const [theme, setTheme] = React.useState(dark)
+
+        React.useEffect(() => {
+           setTheme(mode === 'dark' ? dark : light)
+        }, [mode])
+
+        const changeMode = () : void => {
+            setMode(mode === 'dark' ? 'light' : 'dark')
+        }
 
    return(
-        <PasStyleThemeContext.Provider value={{mode, setMode, light, dark}}>
-            <ThemeProvider theme={mode === 'light' ? light : dark}>
+        <PasStyleThemeContext.Provider value={{mode, setMode, theme, setTheme, changeMode}}>
+            <ThemeProvider theme={theme}>
                 {children}
             </ThemeProvider>
         </PasStyleThemeContext.Provider>

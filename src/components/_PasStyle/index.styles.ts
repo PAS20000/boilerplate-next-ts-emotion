@@ -5,6 +5,10 @@ const StyleDiv = styled.div<TCreateStyle>`
     ${props => CreateStyle({...props})}
 `
 
+const StyleCode = styled.code<TCreateStyle>`
+    ${props => CreateStyle({...props})}
+`
+
 const StyleInput = styled.input<TCreateStyle>`
     ${props => CreateStyle({...props})}
 `
@@ -125,6 +129,10 @@ const StyleTextArea = styled.textarea<TCreateStyle>`
     ${props => CreateStyle({...props})}
 `
 
+const StyleLabel = styled.label<TCreateStyle>`
+    ${props => CreateStyle({...props})}
+`
+
 export default  {
     StyleArticle,
     StyleAside,
@@ -157,5 +165,7 @@ export default  {
     StyleImg,
     StyleInput,
     StyleTextArea,
+    StyleCode,
+    StyleLabel,
     CreateStyle,
 }

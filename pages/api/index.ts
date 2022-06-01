@@ -1,43 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next"
 
-export const dataUsers = [
-    {
-        id:'1',
-        name:'teste1',
-        email:'teste1@hotmail.com',
-        avatar:'https://i.pinimg.com/736x/85/f5/8c/85f58cc999bf7c2aace741f592df9c58.jpg',
-        status:'inactive'
-    },
-    {
-        id:'2',
-        name:'teste2',
-        email:'teste2@hotmail.com',
-        avatar:'https://33.media.tumblr.com/964388f84a8052c301d6309ecea8db05/tumblr_nel87gkcTr1r2gyilo1_500.gif',
-        status:'active'
-    },
-    {
-        id:'3',
-        name:'teste3',
-        email:'teste3@hotmail.com',
-        avatar:'https://i.pinimg.com/236x/ec/d2/2a/ecd22ad93617a905117156091ebc7bb8.jpg',
-        status:'active'
-    },
-    {
-        id:'4',
-        name:'teste4',
-        email:'teste4@hotmail.com',
-        avatar:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwI0cCsHrPG1OeVhTfyjkBln1dbjpcO5oveG-bB4TBBLC_Iq7QOMGEaZ3IXQtb3egVpg&usqp=CAU',
-        status:'inactive'
-    },
-    {
-        id:'5',
-        name:'teste5',
-        email:'teste5@hotmail.com',
-        avatar:'https://i1.sndcdn.com/avatars-hNxI1fLALMFOBFzd-NXIV5Q-t500x500.jpg',
-        status:'active'
-    }
-]
-
 export const dataAnimes = [
     {
         id:'1',
@@ -63,6 +25,54 @@ export const dataAnimes = [
         id:'5',
         name:'anime5',
         thumb:'/img/anime.webp'
+    },
+    {
+        id:'6',
+        name:'anime6',
+        thumb:'/img/anime.webp'
+    }
+]
+
+export const dataUsers = [
+    {
+        id:'1',
+        name:'User Name 1',
+        email:'user@gmail.com',
+        avatar:'https://i.pinimg.com/736x/d5/ed/82/d5ed82acab71310edca849429431e505.jpg',
+        status:'inactive',
+        animes_like:dataAnimes.slice(0, 1)
+    },
+    {
+        id:'2',
+        name:'User Name 2',
+        email:'user@gmail.com',
+        avatar:'https://33.media.tumblr.com/964388f84a8052c301d6309ecea8db05/tumblr_nel87gkcTr1r2gyilo1_500.gif',
+        status:'active',
+        animes_like:dataAnimes.slice(0, 2)
+    },
+    {
+        id:'3',
+        name:'User Name 3',
+        email:'user@gmail.com',
+        avatar:'https://i.pinimg.com/236x/ec/d2/2a/ecd22ad93617a905117156091ebc7bb8.jpg',
+        status:'active',
+        animes_like:dataAnimes.slice(0, 3)
+    },
+    {
+        id:'4',
+        name:'User Name 4',
+        email:'user@gmail.com',
+        avatar:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwI0cCsHrPG1OeVhTfyjkBln1dbjpcO5oveG-bB4TBBLC_Iq7QOMGEaZ3IXQtb3egVpg&usqp=CAU',
+        status:'inactive',
+        animes_like:dataAnimes.slice(0, 4)
+    },
+    {
+        id:'5',
+        name:'User Name 5',
+        email:'user@gmail.com',
+        avatar:'https://i1.sndcdn.com/avatars-hNxI1fLALMFOBFzd-NXIV5Q-t500x500.jpg',
+        status:'active',
+        animes_like:dataAnimes.slice(0, 5)
     }
 ]
 

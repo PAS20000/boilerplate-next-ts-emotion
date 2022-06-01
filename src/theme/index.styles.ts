@@ -6,6 +6,9 @@ declare module '@emotion/react' {
       colors?: {
         primary:string
         secondary: string
+        tertiary:string
+        quartenary:string
+        quintenary:string
         bg:string
       }
     }
@@ -13,16 +16,22 @@ declare module '@emotion/react' {
 
 export const light : Theme = {
     colors: {
-        primary:'pink',
+        primary:'yellow',
         secondary:'red',
-        bg:'#fff'
+        tertiary:'blue',
+        quartenary:'gray',
+        quintenary:'#242',
+        bg:'orange'
     }
 }
 
 export const dark : Theme = {
     colors: {
-        primary:'red',
-        secondary:'pink',
-        bg:'#000'
+        primary:'#bd93f9',
+        secondary:'#f1fa8c',
+        tertiary:'#50fa7b',
+        quartenary:'#282a36', 
+        quintenary:'#8be9fd',
+        bg:'#21202c'
     }
 }

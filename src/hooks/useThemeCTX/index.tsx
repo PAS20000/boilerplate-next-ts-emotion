@@ -1,15 +1,16 @@
 import * as React from 'react'
-import { ThemeContext, ThemeCTX } from '../../contexts/ThemeContext'
+import { PasStyleThemeContext, ThemeCTX } from '../../contexts/ThemeContext'
 
 
 const useThemeCTX = () : ThemeCTX  => {
-    const { mode, setMode, dark, light } = React.useContext(ThemeContext)
+    const { mode, setMode, theme, setTheme, changeMode } = React.useContext(PasStyleThemeContext)
 
     return {
         mode,
         setMode,
-        dark,
-        light
+        theme,
+        setTheme,
+        changeMode,
     }
 }
 

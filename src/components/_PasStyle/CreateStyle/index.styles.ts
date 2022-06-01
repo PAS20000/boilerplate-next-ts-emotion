@@ -34,8 +34,12 @@ const CreateStyles = ({
     op,
     color,
     b_Color,
+    cursor,
+    position,
+    shadow
 } : Styles) => {
     return`
+
         ${animation && `@keyframes show {
             from{
                 opacity: 0;
@@ -54,10 +58,13 @@ const CreateStyles = ({
         ${flex && center && `justify-content: center`};
         ${flex && end && `justify-content: end`};
         ${grid && 'display: grid'};
+        ${grid && center && `align-self: center;` && `align-items: center;` && `justify-self: center`};
         ${flex && 'flex-wrap: wrap'};
         ${!flex && columns && `grid-template-columns: ${columns}`};
         ${!flex && rows && `grid-template-rows: ${rows}`};
         ${flex && column ? 'flex-direction: column' : 'flex-direction: row'};
+        ${position && `position: ${position}`};
+        ${shadow && `box-shadow: ${shadow}`};
         ${border && `border: ${border}`};
         ${b_Radius && `border-radius: ${b_Radius}`};
         ${b_Color && `border-color: ${b_Color}`};
@@ -71,7 +78,7 @@ const CreateStyles = ({
         ${h && `height: ${h}`};
         ${pd && `padding: ${pd}`};
         ${mg && `margin: ${mg}`};
-        ${f_size && `font-size ${f_size}`};
+        ${f_size && `font-size: ${f_size}`};
         ${f_family && `font-family: ${f_family}`};
         ${f_weight && `font-weight: ${f_weight}`};
         ${t_transform && `text-transform: ${t_transform}`};
@@ -79,8 +86,9 @@ const CreateStyles = ({
         ${transform && `transform: ${transform}`}; 
         ${transition && `transition: ${transition}`};
         ${op && `opacity: ${op}`};
-    `
-}
+        ${cursor && ` cursor: ${cursor}`};
+
+`}
 
 const CreateStyle = (props: TCreateStyle) : string =>  {
     
@@ -121,7 +129,15 @@ const CreateStyle = (props: TCreateStyle) : string =>  {
 export default CreateStyle
 
 export const Testes = styled.div`
-    
+        width: 100%;
+        background-color: blue;
+        @media(max-width: 500px){
+            
+        }
+        font-size: 20px;
+    :focus{
+        color: red;
+    }
    
    
 `
