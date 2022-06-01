@@ -46,6 +46,8 @@ export type Props = {
     color?:string
     cursor?:string
     position?:string
+    outline?:string
+    outline_color?:string
 }
 
 const PasStyle = (props:childrenProps<Props>) => {

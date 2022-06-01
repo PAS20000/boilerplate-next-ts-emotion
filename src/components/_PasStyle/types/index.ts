@@ -52,6 +52,8 @@ export type Styles = {
     cursor?:string
     position?:string
     shadow?:string
+    outline?:string
+    outline_color?:string
 }
 
 export type childrenProps<T> = React.PropsWithChildren<T & DefaultProps>

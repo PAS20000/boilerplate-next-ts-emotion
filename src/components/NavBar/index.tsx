@@ -20,7 +20,7 @@ const NavBar = () => {
                 t_decoration='none'
                 f_size='36px'
                 f_weight='600'
-                color={theme.colors.primary}
+                color={theme.colors.quintenary}
                 _hover={{
                     transition: '1s',
                     color:theme.colors.tertiary,
@@ -31,7 +31,7 @@ const NavBar = () => {
             <PasStyle  
                 onClick={() => changeMode()}
                 tag='BUTTON'
-                color={theme.colors.primary}
+                color={theme.colors.quintenary}
                 bg='transparent'
                 border='solid 2px'
                 b_Radius='50%'

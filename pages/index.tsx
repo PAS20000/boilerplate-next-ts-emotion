@@ -1,7 +1,8 @@
 import { GetStaticProps } from 'next'
 import * as React from 'react'
 import Code from '../src/components/Code'
-import Gen from '../src/components/Gen'
+import Form from '../src/components/Form'
+import Gen from '../src/components/Form'
 import NavBar from '../src/components/NavBar'
 import PasStyle from '../src/components/_PasStyle'
 import useThemeCTX from '../src/hooks/useThemeCTX'
@@ -71,7 +72,7 @@ const Home = ({
                 <NavBar />
            </PasStyle>
             <PasStyle tag='MAIN'>
-               <Gen />
+               <Form />
                
             </PasStyle>
            <PasStyle tag='FOOTER'>

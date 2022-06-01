@@ -36,7 +36,9 @@ const CreateStyles = ({
     b_Color,
     cursor,
     position,
-    shadow
+    shadow,
+    outline,
+    outline_color
 } : Styles) => {
     return`
 
@@ -50,6 +52,8 @@ const CreateStyles = ({
         }
             animation: ${animation} 1s;
         `}
+        ${outline && `outline: ${outline}`};
+        ${outline_color && `outline-color: ${outline_color}`};
         ${flex && 'display: flex'};
         ${flex && between && `justify-content: space-between`};
         ${flex && around && `justify-content: space-around`};
@@ -87,7 +91,6 @@ const CreateStyles = ({
         ${transition && `transition: ${transition}`};
         ${op && `opacity: ${op}`};
         ${cursor && ` cursor: ${cursor}`};
-
 `}
 
 const CreateStyle = (props: TCreateStyle) : string =>  {
@@ -131,10 +134,12 @@ export default CreateStyle
 export const Testes = styled.div`
         width: 100%;
         background-color: blue;
+        outline-color: red;
         @media(max-width: 500px){
             
         }
         font-size: 20px;
+        outline: none;
     :focus{
         color: red;
     }
